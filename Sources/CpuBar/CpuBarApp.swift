@@ -8,7 +8,7 @@ struct CpuBarApp: App {
         MenuBarExtra {
             ProcessListView(sampler: sampler)
         } label: {
-            Text("CPU \(sampler.totalCpu)%")
+            Image(nsImage: MenuBarLabel.image(totalCpu: sampler.totalCpu))
         }
         .menuBarExtraStyle(.window)
     }
